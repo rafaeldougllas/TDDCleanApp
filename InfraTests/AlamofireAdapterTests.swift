@@ -16,7 +16,7 @@ class AlamofireAdapter {
     }
     
     func post(to url: URL, with data: Data?) {
-        let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
+        let json = data == nil ? nil : try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
         session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).resume()
     }
 }
@@ -34,6 +34,21 @@ final class AlamofireAdapterTests: XCTestCase {
             XCTAssertEqual(url, request.url)
             XCTAssertEqual("POST", request.httpMethod)
             XCTAssertNotNil(request.httpBodyStream)
+            expectation.fulfill()
+        })
+        wait(for: [expectation], timeout: 1)
+    }
+    
+    func test_post_should_make_request_with_no_data() {
+        let url = makeUrl()
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [UrlProtocolStub.self]
+        let session = Session(configuration: configuration)
+        let sut = AlamofireAdapter(session: session)
+        sut.post(to: url, with: nil)
+        let expectation = expectation(description: "Waiting Async Method")
+        UrlProtocolStub.observerRequest(completion: { request in
+            XCTAssertNil(request.httpBodyStream)
             expectation.fulfill()
         })
         wait(for: [expectation], timeout: 1)
