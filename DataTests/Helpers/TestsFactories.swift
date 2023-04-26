@@ -9,7 +9,7 @@ import Foundation
 import Domain
 
 func makeUrl() -> URL {
-    return URL(string: "http://any-url.com")!
+    return URL(string: "https://any-url.com")!
 }
 
 func makeAccount() -> Account {
@@ -32,6 +32,10 @@ func makeInvalidData() -> Data {
 
 func makeValidData() -> Data {
     return Data("{\"name\":\"Rafael\"}".utf8)
+}
+
+func makeEmptyData() -> Data {
+    return Data()
 }
 
 func makeError() -> Error {
