@@ -28,6 +28,8 @@
 		1F3F92D429F9C79500D91CC5 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F92D329F9C79500D91CC5 /* UrlProtocolStub.swift */; };
 		1F7A5B7E2A0B0B5400928BD5 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7A5B762A0B0B5300928BD5 /* Presentation.framework */; };
 		1F7A5B832A0B0B5400928BD5 /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A5B822A0B0B5400928BD5 /* SignUpPresenterTests.swift */; };
+		1F7A5B8E2A0B183A00928BD5 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A5B8D2A0B183A00928BD5 /* SignUpPresenter.swift */; };
+		1F7A5B902A0B187300928BD5 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A5B8F2A0B187300928BD5 /* AlertView.swift */; };
 		1FCD987C2984A14B00C4AE82 /* AddAccountUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD987B2984A14B00C4AE82 /* AddAccountUseCaseProtocol.swift */; };
 		1FCD987E2984A36300C4AE82 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD987D2984A36300C4AE82 /* AccountModel.swift */; };
 		1FCD98A62984A4B300C4AE82 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCD989E2984A4B200C4AE82 /* Data.framework */; };
@@ -118,6 +120,8 @@
 		1F7A5B762A0B0B5300928BD5 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7A5B7D2A0B0B5400928BD5 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7A5B822A0B0B5400928BD5 /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
+		1F7A5B8D2A0B183A00928BD5 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		1F7A5B8F2A0B187300928BD5 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		1FCD987429849FD300C4AE82 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCD987B2984A14B00C4AE82 /* AddAccountUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountUseCaseProtocol.swift; sourceTree = "<group>"; };
 		1FCD987D2984A36300C4AE82 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 		1F7A5B772A0B0B5400928BD5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1F7A5B8B2A0B17BE00928BD5 /* Presenters */,
+				1F7A5B8C2A0B17C800928BD5 /* Views */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -306,6 +312,22 @@
 				1F7A5B822A0B0B5400928BD5 /* SignUpPresenterTests.swift */,
 			);
 			path = PresentationTests;
+			sourceTree = "<group>";
+		};
+		1F7A5B8B2A0B17BE00928BD5 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				1F7A5B8D2A0B183A00928BD5 /* SignUpPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		1F7A5B8C2A0B17C800928BD5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F7A5B8F2A0B187300928BD5 /* AlertView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1FCD984F29849EEA00C4AE82 = {
@@ -562,6 +584,7 @@
 					};
 					1F7A5B752A0B0B5300928BD5 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					1F7A5B7C2A0B0B5400928BD5 = {
 						CreatedOnToolsVersion = 14.3;
@@ -682,6 +705,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7A5B8E2A0B183A00928BD5 /* SignUpPresenter.swift in Sources */,
+				1F7A5B902A0B187300928BD5 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,6 +894,7 @@
 		1F7A5B852A0B0B5400928BD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -894,6 +920,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -903,6 +930,7 @@
 		1F7A5B862A0B0B5400928BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -937,6 +965,7 @@
 		1F7A5B872A0B0B5400928BD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -953,6 +982,7 @@
 		1F7A5B882A0B0B5400928BD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
