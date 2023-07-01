@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-public final class RemoteAddAccountUseCase: AddAccountUseCaseProtocol {
+public final class RemoteAddAccountUseCase: AddAccount {
     private let url: URL
     private let httpClient: HttpPostClient
     
@@ -17,9 +17,9 @@ public final class RemoteAddAccountUseCase: AddAccountUseCaseProtocol {
         self.httpClient = httpClient
     }
     
-    public func add(account: Account, completion: @escaping (AddAccountUseCaseProtocol.Result) -> Void) {
+    public func add(addAccountModel: AddAccountModel, completion: @escaping (AddAccount.Result) -> Void) {
         httpClient.post(to: url,
-                        with: account.toData()) { [weak self] result in
+                        with: addAccountModel.toData()) { [weak self] result in
             guard self != nil else { return } // Prevents the completion from being called after losing the instance
             
             switch result {

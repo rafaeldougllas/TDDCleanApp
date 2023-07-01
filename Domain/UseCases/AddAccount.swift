@@ -7,22 +7,22 @@
 
 import Foundation
 
-public protocol AddAccountUseCaseProtocol {
+public protocol AddAccount {
     typealias Result = Swift.Result<AccountModel, DomainError>
-    func add(account: Account,
-             completion: @escaping (AddAccountUseCaseProtocol.Result) -> Void)
+    func add(addAccountModel: AddAccountModel,
+             completion: @escaping (AddAccount.Result) -> Void)
 }
 
-public struct Account: Model {
+public struct AddAccountModel: Model {
     var name: String
     var email: String
     var password: String
-    var passwordConfirm: String
+    var passwordConfirmation: String
     
-    public init(name: String, email: String, password: String, passwordConfirm: String) {
+    public init(name: String, email: String, password: String, passwordConfirmation: String) {
         self.name = name
         self.email = email
         self.password = password
-        self.passwordConfirm = passwordConfirm
+        self.passwordConfirmation = passwordConfirmation
     }
 }

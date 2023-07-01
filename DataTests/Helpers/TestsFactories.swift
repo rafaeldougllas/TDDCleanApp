@@ -12,18 +12,11 @@ func makeUrl() -> URL {
     return URL(string: "https://any-url.com")!
 }
 
-func makeAccount() -> Account {
-    return Account(name: "any-name",
-                   email: "any-email",
-                   password: "any-password",
-                   passwordConfirm: "any-passwordConfirm")
-}
-
-func makeAccountModel() -> AccountModel {
-    return AccountModel(id: "any-id",
-                        name: "any-name",
-                        email: "any-email",
-                        password: "any-password")
+func makeAccount() -> AddAccountModel {
+    return AddAccountModel(name: "any-name",
+                           email: "any-email",
+                           password: "any-password",
+                           passwordConfirmation: "any-passwordConfirmation")
 }
 
 func makeInvalidData() -> Data {
@@ -39,7 +32,7 @@ func makeEmptyData() -> Data {
 }
 
 func makeError() -> Error {
-        return NSError(domain: "Any-Error", code: -1)
+    return NSError(domain: "Any-Error", code: -1)
 }
 
 func makeHttpResponse(statusCode: Int = 200) -> HTTPURLResponse {
