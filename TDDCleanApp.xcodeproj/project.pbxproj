@@ -39,6 +39,7 @@
 		1FCD98B52984A50600C4AE82 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCD987429849FD300C4AE82 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A88909C2A4C541F0046FE46 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCD987429849FD300C4AE82 /* Domain.framework */; };
 		3A88909D2A4C541F0046FE46 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCD987429849FD300C4AE82 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A970F752A50D3DE00D4D61A /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD74D9D2A4B0487002C5E62 /* AccountModelFactory.swift */; };
 		3AD74D9E2A4B0487002C5E62 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD74D9D2A4B0487002C5E62 /* AccountModelFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -752,6 +753,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A970F752A50D3DE00D4D61A /* AccountModelFactory.swift in Sources */,
 				1F7A5B832A0B0B5400928BD5 /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
