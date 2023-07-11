@@ -37,6 +37,7 @@
 		1FCD98AB2984A4B300C4AE82 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCD98AA2984A4B300C4AE82 /* DataTests.swift */; };
 		1FCD98B42984A50600C4AE82 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCD987429849FD300C4AE82 /* Domain.framework */; };
 		1FCD98B52984A50600C4AE82 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCD987429849FD300C4AE82 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A13BD7E2A5E020800C0B5FC /* TestsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F269A9729F817CB00B1CA9E /* TestsExtensions.swift */; };
 		3A88909C2A4C541F0046FE46 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCD987429849FD300C4AE82 /* Domain.framework */; };
 		3A88909D2A4C541F0046FE46 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCD987429849FD300C4AE82 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A970F752A50D3DE00D4D61A /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD74D9D2A4B0487002C5E62 /* AccountModelFactory.swift */; };
@@ -754,6 +755,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A970F752A50D3DE00D4D61A /* AccountModelFactory.swift in Sources */,
+				3A13BD7E2A5E020800C0B5FC /* TestsExtensions.swift in Sources */,
 				1F7A5B832A0B0B5400928BD5 /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
